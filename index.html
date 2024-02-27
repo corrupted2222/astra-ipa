@@ -76,7 +76,7 @@
     
         .card {
             background-color: white;
-            height: auto;
+            height: 50px;
             border-radius: 10px;
             padding: 25px;
             text-align: left;
@@ -96,7 +96,7 @@
     
         .card h3 {
             color: black;
-            font-family: system-ui, -apple-system, sans-serif;;
+            font-family: system-ui, -apple-system, sans-serif;
             margin-top: 5px;
             position: relative;
             top: -30px;
@@ -105,6 +105,9 @@
     
         .card p {
             margin: 10px 0;
+            color: black;
+            font-family: system-ui, -apple-system, sans-serif;
+
         }
     
         .card a {
@@ -114,7 +117,7 @@
     
         .card button {
             position: absolute;
-            bottom: 10px;
+            bottom: 15px;
             left: 40%;
             transform: translateX(-50%);
             background-color: black;
@@ -198,6 +201,22 @@
             height: auto;/
         }
 
+
+    .developer {
+        position: relative;
+        bottom: 52px;
+        right: 15px;
+        font-size: 13px;
+    }
+
+    .file-size {
+        position: relative;
+        bottom: 79px;
+        left: 80px;
+        font-size: 13px;
+    }
+
+
         @media screen and (max-width: 500px) {
             .title {
                 font-size: 23px;
@@ -246,60 +265,70 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cards = [
-
                 {
                     title: "Scarlet",
                     image: "images/app-icons/scarlet.png",
                     link: " itms-services://?action=download-manifest&url=//api.starfiles.co/installipa/4ba2867be09b",
+                    developer: "Scarlet Team",
+                    file_size: "5.3MB"
                 },
                 {
                     title: "GBox",
                     image: "images/app-icons/gbox.png",
                     link: "https://jailbreak.com/ps99",
+                    developer: "GBox Team",
+                    file_size: "4.2MB"
                 },
                 {
                     title: "ESign",
                     image: "images/app-icons/esign.png",
                     link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    developer: "ESign Team",
+                    file_size: "6.5MB"
                 },
             ];
-
+    
             const searchInput = document.getElementById("searchInput");
             const cardContainer = document.getElementById("cardContainer");
-
+    
             function renderCards(query) {
                 cardContainer.innerHTML = "";
-
+    
                 const filteredCards = cards.filter(card =>
                     card.title.toLowerCase().includes(query.toLowerCase())
                 );
-
+    
                 filteredCards.forEach(card => {
                     const cardElement = document.createElement("div");
                     cardElement.classList.add("card");
-
+    
                     cardElement.innerHTML = `
-                        <h3>${card.title}</h3>
-                        <button onclick="window.location.href='${card.link}'">Download</button>
+                    <h3>${card.title}</h3>
+                    <p class="developer">${card.developer}</p>
+                    <p class="file-size">${card.file_size}</p>
+                    <button onclick="window.location.href='${card.link}'">Download</button>
                     `;
-
+    
                     if (card.image) {
                         const imgElement = document.createElement("img");
                         imgElement.src = card.image;
                         cardElement.appendChild(imgElement);
                     }
-
+    
                     cardContainer.appendChild(cardElement);
                 });
             }
-
+    
             searchInput.addEventListener("input", function () {
                 renderCards(searchInput.value);
             });
-
+    
             renderCards("");
         });
     </script>
+    
+    
+    
 
 <footer>
     &copy; 2024 Astra. All rights reserved.
