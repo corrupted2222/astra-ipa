@@ -46,7 +46,7 @@
             color: white;
             padding: 10px;
             text-align: center;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
             font-family: system-ui, -apple-system, sans-serif;
@@ -117,7 +117,7 @@
     
         .card button {
             position: absolute;
-            bottom: 15px;
+            bottom: 25px;
             left: 40%;
             transform: translateX(-50%);
             background-color: black;
@@ -204,16 +204,18 @@
 
     .developer {
         position: relative;
-        bottom: 52px;
+        bottom: -6px;
         right: 15px;
         font-size: 13px;
+        font-family: system-ui, -apple-system, sans-serif;
     }
 
     .file-size {
         position: relative;
-        bottom: 79px;
+        bottom: 21px;
         left: 80px;
         font-size: 13px;
+        font-family: system-ui, -apple-system, sans-serif;
     }
 
 
@@ -229,7 +231,7 @@
 <body>
 
 
-    <h1 class="title">Astra | IPA's</h1>
+    <h1 class="title">Astra | App Libary</h1>
 
                   <!-- Burger Menu -->
     <div class="burger-menu" onclick="toggleBurgerMenu()">
@@ -258,7 +260,7 @@
     </script>
 
     <div class="container">
-        <input class="search" type="text" id="searchInput" placeholder="Search by card title">
+        <input class="search" type="text" id="searchInput" placeholder="Search app by name..">
         <div id="cardContainer" class="card-grid"></div>
     </div>
 
@@ -268,23 +270,142 @@
                 {
                     title: "Scarlet",
                     image: "images/app-icons/scarlet.png",
-                    link: " itms-services://?action=download-manifest&url=//api.starfiles.co/installipa/4ba2867be09b",
+                    link: "downloads/apps/scarlet.ipa",
                     developer: "Scarlet Team",
-                    file_size: "5.3MB"
+                    file_size: "14.92MB"
                 },
                 {
                     title: "GBox",
                     image: "images/app-icons/gbox.png",
-                    link: "https://jailbreak.com/ps99",
+                    link: "downloads/apps/gbox.ipa",
                     developer: "GBox Team",
-                    file_size: "4.2MB"
+                    file_size: "3.34MB"
                 },
                 {
                     title: "ESign",
                     image: "images/app-icons/esign.png",
-                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    link: "downloads/apps/esign.ipa",
                     developer: "ESign Team",
-                    file_size: "6.5MB"
+                    file_size: "6.79MB"
+                },
+                {
+                    title: "VPN - Proxy Master",
+                    image: "images/app-icons/vpn.png",
+                    link: "downloads/apps/proxy-master.ipa",
+                    developer: "KamoHacks",
+                    file_size: "9.4MB"
+                },
+                {
+                    title: "Arcues X",
+                    image: "images/app-icons/arcuesx.png",
+                    link: "https://download.starfiles.co/92f9e5b0b8f3",
+                    developer: "SPDM Team",
+                    file_size: "104.43MB"
+                },
+                {
+                    title: "Codex",
+                    image: "images/app-icons/codex.png",
+                    link: "https://download.starfiles.co/587f3bbed08f",
+                    developer: "Codex Team",
+                    file_size: "105.89MB"
+                },
+                {
+                    title: "Cookie Run Kingdom",
+                    image: "images/app-icons/cookie.png",
+                    link: "https://www.mediafire.com/file/h8mg2bgu7dn7phl/Cookie-run-kingdom.ipa/file",
+                    developer: "KamoHacks",
+                    file_size: "2.20GB"
+                },
+                {
+                    title: "Spotify",
+                    image: "images/app-icons/spotify.png",
+                    link: "https://download.starfiles.co/0786915fad0c",
+                    developer: "iForgotModz",
+                    file_size: "44.72MB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: " itms-services://?action=download-manifest&url=//api.starfiles.co/installipa/4ba2867be09b",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://jailbreak.com/ps99",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: " itms-services://?action=download-manifest&url=//api.starfiles.co/installipa/4ba2867be09b",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://jailbreak.com/ps99",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: " itms-services://?action=download-manifest&url=//api.starfiles.co/installipa/4ba2867be09b",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://jailbreak.com/ps99",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://jailbreak.com/ps99",
+                    developer: "astra Team",
+                    file_size: "0KB"
+                },
+                {
+                    title: "Astra",
+                    image: "images/app-icons/astra.png",
+                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
+                    developer: "astra Team",
+                    file_size: "0KB"
                 },
             ];
     
