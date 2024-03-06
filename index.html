@@ -29,7 +29,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: black;
+            background-color: #1E1E1E;
             color: white;
         }
     
@@ -42,7 +42,7 @@
         }
 
         footer {
-            background-color: black;
+            background-color: #1E1E1E;
             color: white;
             padding: 10px;
             text-align: center;
@@ -64,6 +64,7 @@
             max-width: 90%;
             margin: 0 auto;
             text-align: center;
+            align-items: center;
         }
     
         .card-grid {
@@ -89,6 +90,7 @@
             position: absolute;
             right: 15px;
             top: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     
     
@@ -116,21 +118,39 @@
         .card button {
             position: absolute;
             bottom: 25px;
-            left: 40%;
+            left: 35%;
             transform: translateX(-50%);
-            background-color: black;
-            color: white;
-            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #00BDFF;
+            color: black;
             border: none;
-            padding: 13px 50px;
-            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            height: 45px;
+            width: 170px;
+            border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+    
+        .card button img {
+            width: 70px;
+            height: 70px;
+            position: relative;
+            right: -10px;
+            bottom: 5px;
+            top: 0px;
+            box-shadow: none
         }
     
         .card button:hover {
-            background-color: grey;
+            background-color: #70DAFF;
         }
+       
+
+
 
         .burger-menu {
             cursor: pointer;
@@ -169,14 +189,15 @@
             margin-top: -30px;
             position: fixed;
             top: 70px;
-            right: 0;
+            right: 0px;
             width: 150px;
-            background-color: #fff;
+            background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             z-index: 999;
             overflow: hidden;
             height: 0;
             transition: height 0.3s;
+            border-radius: 10px;
         }
 
         .menu a {
@@ -193,45 +214,52 @@
             background-color: grey;
         }
 
-        
         .menu-open {
             display: block;
-            height: auto;/
+            height: auto;
         }
 
+        .developer {
+            position: relative;
+            bottom: -6px;
+            right: 15px;
+            font-size: 13px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
-    .developer {
-        position: relative;
-        bottom: -6px;
-        right: 15px;
-        font-size: 13px;
-        font-family: system-ui, -apple-system, sans-serif;
-    }
-
-    .file-size {
-        position: relative;
-        bottom: 21px;
-        left: 80px;
-        font-size: 13px;
-        font-family: system-ui, -apple-system, sans-serif;
-    }
-
+        .file-size {
+            position: relative;
+            bottom: 21px;
+            left: 80px;
+            font-size: 13px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
         @media screen and (max-width: 500px) {
             .title {
                 font-size: 23px;
+                position: relative;
+                left: 10px;
             }
+
+            .menu {
+                position: fixed;
+            top: 70px;
+            right: 55px;
+            }
+
+            .burger-menu {
+                position: fixed;
+                right: 50px;
+            }
+
         }
     </style>
-    
-
 </head>
 <body>
-
-
     <h1 class="title">Astra | App Libary</h1>
 
-                  <!-- Burger Menu -->
+    <!-- Burger Menu -->
     <div class="burger-menu" onclick="toggleBurgerMenu()">
         <div></div>
         <div></div>
@@ -239,13 +267,12 @@
     </div>
     
     <div class="menu" id="menu">
-        <a href="index.html">Home</a>
+        <a href="index.html">App Libary</a>
         <a href="scripts.html">Scripts</a>
         <a href="#">Signer</a>
         <a href="certificates.html">Certificates</a>
         <a href="#">Discord Bot</a>
     </div>
-    
     
     <script>
         function toggleBurgerMenu() {
@@ -265,7 +292,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cards = [
-                {
+            {
                     title: "Scarlet",
                     image: "images/app-icons/scarlet.png",
                     link: "downloads/apps/scarlet.ipa",
@@ -371,39 +398,39 @@
                     file_size: "113.9MB"
                 },
                 {
-                    title: "Astra",
-                    image: "images/app-icons/astra.png",
-                    link: " itms-services://?action=download-manifest&url=//api.starfiles.co/installipa/4ba2867be09b",
-                    developer: "astra Team",
-                    file_size: "0KB"
+                    title: "Pokemon Go",
+                    image: "images/app-icons/pokemon.png",
+                    link: "https://download.starfiles.co/fa272e7c3c81",
+                    developer: "KamoHacks",
+                    file_size: "154.8MB"
                 },
                 {
-                    title: "Astra",
-                    image: "images/app-icons/astra.png",
-                    link: "https://jailbreak.com/ps99",
-                    developer: "astra Team",
-                    file_size: "0KB"
+                    title: "Dokaon Battle",
+                    image: "images/app-icons/dokkan.png",
+                    link: "https://download.starfiles.co/51dfb1de5abd",
+                    developer: "KamoHacks",
+                    file_size: "931.6MB"
                 },
                 {
-                    title: "Astra",
-                    image: "images/app-icons/astra.png",
-                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
-                    developer: "astra Team",
-                    file_size: "0KB"
+                    title: "Subway Surfers",
+                    image: "images/app-icons/subway-surfers.png",
+                    link: "https://download.starfiles.co/a97e6620ea09",
+                    developer: "KamoHacks",
+                    file_size: "135.8MB"
                 },
                 {
-                    title: "Astra",
-                    image: "images/app-icons/astra.png",
-                    link: "https://jailbreak.com/ps99",
-                    developer: "astra Team",
-                    file_size: "0KB"
+                    title: "Dragaon Ball Legends",
+                    image: "images/app-icons/dragon.png",
+                    link: "https://download.starfiles.co/fa272e7c3c81",
+                    developer: "KamoHacks",
+                    file_size: "121.3MB"
                 },
                 {
-                    title: "Astra",
-                    image: "images/app-icons/astra.png",
-                    link: "https://api.cococloud-signing.online/free-plist?url=https://www.astra-ipa.com/downloads/apps/scarlet.ipa",
-                    developer: "astra Team",
-                    file_size: "0KB"
+                    title: "Dragon Ball Legends JP",
+                    image: "images/app-icons/dragon.png",
+                    link: "https://download.starfiles.co/da6435114490",
+                    developer: "KamoHacks",
+                    file_size: "123.1MB"
                 },
             ];
     
@@ -420,14 +447,17 @@
                 filteredCards.forEach(card => {
                     const cardElement = document.createElement("div");
                     cardElement.classList.add("card");
-    
+
                     cardElement.innerHTML = `
-                    <h3>${card.title}</h3>
-                    <p class="developer">${card.developer}</p>
-                    <p class="file-size">${card.file_size}</p>
-                    <button onclick="window.location.href='${card.link}'">Download</button>
+                        <h3>${card.title}</h3>
+                        <p class="developer">${card.developer}</p>
+                        <p class="file-size">${card.file_size}</p>
+                        <button onclick="window.location.href='${card.link}'" class="download-button">
+    <img src="images/image/download.png" alt="Download Icon" class="button-icon larger-icon">
+    Download
+</button>
                     `;
-    
+
                     if (card.image) {
                         const imgElement = document.createElement("img");
                         imgElement.src = card.image;
@@ -446,12 +476,8 @@
         });
     </script>
     
-    
-    
-
-<footer>
-    &copy; 2024 Astra. All rights reserved.
-</footer>
-
+    <footer>
+        &copy; 2024 Astra. All rights reserved.
+    </footer>
 </body>
 </html>
